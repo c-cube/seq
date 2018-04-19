@@ -1,5 +1,5 @@
 opam-version: "1.2"
-name: "oseq"
+name: "seq"
 version: "0.1"
 author: "Simon Cruanes"
 maintainer: "simon.cruanes.2007@m4x.org"
@@ -7,11 +7,11 @@ license: "GPL"
 build: [
   [make "build"]
 ]
-build-doc: [
-  [make "doc"]
+install: [
+  [make "install"]
 ]
-build-test: [
-  [make "test"]
+remove: [
+  "ocamlfind" "remove" "seq"
 ]
 depends: [
   "ocamlfind" {build}

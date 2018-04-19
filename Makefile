@@ -6,7 +6,9 @@ build:
 clean:
 	ocamlbuild -clean
 
+TOINSTALL=$(wildcard _build/src/*)
+
 install:
-	ocamlfind install seq META _build/src/*.cm* _build/src/*.ml*
+	ocamlfind install seq META $(TOINSTALL)
 
 .PHONY: build clean install

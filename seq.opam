@@ -1,0 +1,28 @@
+opam-version: "1.2"
+name: "oseq"
+version: "0.1"
+author: "Simon Cruanes"
+maintainer: "simon.cruanes.2007@m4x.org"
+license: "GPL"
+build: [
+  [make "build"]
+]
+build-doc: [
+  [make "doc"]
+]
+build-test: [
+  [make "test"]
+]
+depends: [
+  "ocamlfind" {build}
+  "ocamlbuild" {build}
+]
+tags: [ "iterator" "seq" "pure" "list" "compatibility" "cascade" ]
+homepage: "https://github.com/c-cube/seq/"
+bug-reports: "https://github.com/c-cube/seq/issues"
+dev-repo: "https://github.com/c-cube/seq.git"
+available: [
+  ocaml-version < "4.07.0"
+]
+
+

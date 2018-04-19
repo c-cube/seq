@@ -21,8 +21,5 @@ tags: [ "iterator" "seq" "pure" "list" "compatibility" "cascade" ]
 homepage: "https://github.com/c-cube/seq/"
 bug-reports: "https://github.com/c-cube/seq/issues"
 dev-repo: "https://github.com/c-cube/seq.git"
-available: [
-  ocaml-version < "4.07.0"
-]
 
 

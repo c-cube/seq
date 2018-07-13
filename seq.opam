@@ -3,7 +3,7 @@ name: "seq"
 version: "0.1"
 author: "Simon Cruanes"
 maintainer: "simon.cruanes.2007@m4x.org"
-license: "GPL"
+license: "LGPL2.1"
 build: [
   [make "build"]
 ]

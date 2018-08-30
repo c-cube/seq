@@ -22,4 +22,7 @@ homepage: "https://github.com/c-cube/seq/"
 bug-reports: "https://github.com/c-cube/seq/issues"
 dev-repo: "https://github.com/c-cube/seq.git"
 
+# opam-repo contains a version for 4.07 and above that does nothing,
+# because OCaml starts having a `Seq` module in the stdlib
+available: [ocaml-version < "4.07.0"]
 

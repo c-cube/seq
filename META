@@ -1,7 +1,0 @@
-version = "0.1"
-description = "seq"
-requires = ""
-archive(byte) = "seq.cma"
-archive(native) = "seq.cmxa"
-plugin(byte) = "seq.cma"
-plugin(native) = "seq.cmxs"

@@ -7,7 +7,12 @@ SELECT_CMD=$(shell ocaml select_version.ml $(OCAML_VERSION))
 select:
 	$(SELECT_CMD)
 
-TARGETS=$(addprefix src/, seq.cma seq.cmxa seq.cmxs)
+OCAMLOPT := $(shell ocamlopt -version)
+ifdef OCAMLOPT
+	NATIVE_TARGETS := seq.cmxa seq.cmxs
+endif
+
+TARGETS=$(addprefix src/, seq.cma $(NATIVE_TARGETS))
 build: select
 	ocamlbuild $(TARGETS)
 

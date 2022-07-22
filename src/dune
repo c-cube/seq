@@ -1,15 +1,14 @@
-(executable
- (modules select_version)
- (name select_version))
-
 (rule
  (targets seq.ml seq.mli)
- (deps seq_redef.ml seq_redef.mli seq_alias.ml seq_alias.mli)
+ (deps seq_redef.ml seq_redef.mli)
+ (enabled_if (< %{ocaml_version} 4.07))
  (action
   (progn
-   (with-stdout-to seq.mli (run ./select_version.exe intf))
-   (with-stdout-to seq.ml (run ./select_version.exe impl)))))
-   
+   (copy seq_redef.ml seq.ml)
+   (copy seq_redef.mli seq.mli))))
+
 (library
- (modules seq)
+ (wrapped false)
+ ;(modules seq)
+ ;(enabled_if (< %{ocaml_version} 4.07))
  (public_name seq))

@@ -8,6 +8,7 @@
    (copy seq_redef.mli seq.mli))))
 
 (library
- (modules seq)
- (enabled_if (< %{ocaml_version} 4.07))
+ (wrapped false)
+ ;(modules seq)
+ ;(enabled_if (< %{ocaml_version} 4.07))
  (public_name seq))

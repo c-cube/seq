@@ -7,8 +7,6 @@ let s0_10 : int Seq.t =
   mk 0
 
 let () =
-  let s = Seq.append Seq.empty s0_10  in
-  assert (Seq.length s = 11);
-  let sum = Seq.fold_left (+) 0 s in
+  let sum = Seq.fold_left (+) 0 s0_10 in
   Printf.printf "sum: %d\n" sum;
   assert (sum = 55)

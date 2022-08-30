@@ -1,11 +1,11 @@
 (rule
  (targets seq.ml seq.mli)
- (deps seq_redef.ml seq_redef.mli)
+ (deps seq_redef.ml.template seq_redef.mli.template)
  (enabled_if (< %{ocaml_version} 4.07))
  (action
   (progn
-   (copy seq_redef.ml seq.ml)
-   (copy seq_redef.mli seq.mli))))
+   (copy seq_redef.ml.template seq.ml)
+   (copy seq_redef.mli.template seq.mli))))
 
 (library
  (wrapped false)
